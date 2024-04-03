@@ -1,0 +1,60 @@
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+nav {
+    position: absolute;
+    height: 20vh;
+    width: 1vh;
+    min-width: 600px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0.2%;
+    margin-left: 600px;
+    /* margin-top: px; */
+}
+
+a {
+    color: aquamarine;
+    padding: 0 10px;
+    font-size: 18px;
+    font-family: sans-serif;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+}
+
+a:hover:after {
+    width: 100%;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+    /* Adjust the styles for screens with a maximum width of 768px (tablets and small screens) */
+    nav {
+        width: 100%; /* Make the navigation bar take the full width of the screen */
+        min-width: unset; /* Remove the minimum width */
+        margin-left: 0; /* Reset the left margin */
+        top: 0; /* Reset the top position */
+        height: auto; /* Allow the navigation bar to adjust its height as per content */
+        flex-wrap: wrap; /* Allow the navigation items to wrap if needed */
+        justify-content: center; /* Center the navigation items */
+    }
+    a {
+        display: block; /* Make the links occupy the full width when they wrap */
+        margin: 5px; /* Add some space between the links */
+    }
+}
